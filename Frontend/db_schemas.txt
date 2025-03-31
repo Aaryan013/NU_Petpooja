@@ -1,0 +1,17 @@
+inventory_log collection
+
+
+{
+  "_id": "ObjectId",
+  "ingredient_id": "ObjectId", // Reference to Ingredients
+  "action": "string", // 'added' or 'removed'
+  "source": "string", // 'manual' or 'vision'
+  "quantity": "number", // Quantity added or removed
+  "logged_by": "ObjectId", // User who added/removed
+  "timestamp": "datetime", // When action occurred
+  "manual_time": "string", // hh:mm (Optional, if added manually)
+  "reason": "string", // Optional: restock, wastage, dish prep etc.
+  "photo_url": "string" // URL of the photo taken during the 'vision' action (can be null for manual)
+}
+
+
